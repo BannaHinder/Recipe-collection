@@ -1,0 +1,72 @@
+@mixin flex-space-between{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+@mixin flex-center{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+@mixin shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow:0 3px 10px -4px #777;
+}
+
+$theme-color1:#024130;
+$theme-color2:#8cbbae;
+$theme-color3:#024130;
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding:0px;
+    margin:0px;
+}
+header{
+    height:70px;
+
+    color:$theme-color2;
+    @include shadow;
+    padding:20px;
+    margin-left: -10px;
+    @include flex-space-between;
+    .fa-utensils{
+        height: 20px;
+       }
+    img{
+        height:110px;
+        margin-top: 0px;
+    }   
+}
+.spacer{
+    height: 20px;
+    width:100%;
+}
+.recipe1{
+    @include flex-space-between;
+    padding:20px;
+    img{
+        width:600px;
+        border-radius: 7px;
+    }
+    li{
+        list-style: none;
+    }
+}
+
+footer{
+    position: fixed;
+    @include flex-center;
+    bottom:0px;
+    width:100%;
+    height:7vh;
+    background: $theme-color1;
+    a{
+        color:white;
+text-decoration: none;
+margin-right: 20px;
+    }
+}
+
+
