@@ -1,7 +1,8 @@
 @mixin flex-space-between{
     display:flex;
     justify-content:space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: row;
 }
 @mixin flex-center{
     display:flex;
@@ -16,7 +17,7 @@
 
 $theme-color1:#024130;
 $theme-color2:#8cbbae;
-$theme-color3:#024130;
+$theme-color3:#ce8839;
 
 *{
     font-family: 'Montserrat', sans-serif;
@@ -25,37 +26,82 @@ $theme-color3:#024130;
 }
 header{
     height:70px;
-
     color:$theme-color2;
+   
     @include shadow;
     padding:20px;
     margin-left: -10px;
     @include flex-space-between;
     .fa-utensils{
         height: 20px;
+        color: $theme-color3;
        }
     img{
         height:110px;
-        margin-top: 0px;
+        width:300px;
+        margin-top: -20px;
     }   
 }
 .spacer{
-    height: 20px;
+    height: 10px;
     width:100%;
 }
-.recipe1{
-    @include flex-space-between;
+.recipe{
     padding:20px;
-    img{
-        width:600px;
-        border-radius: 7px;
+    .title{
+        padding: 10px;
+        margin-bottom: 10px;
+        p{
+            margin-top: 5px;
+        }
     }
-    li{
-        list-style: none;
+    .flex{
+        @include flex-space-between;
+        
+        .text-flex{
+            display:flex;
+            align-items: flex-start;
+            justify-content: center;
+            ul li{
+                list-style: none;
+                margin-top: 10px;
+            }
+            ol li{
+                margin-top:10px;
+            }
+            article{
+                padding:0 10px 10px 10px ;
+                width:60%;
+            }
+            article.ingredients{    
+                width:50%;
+                height:100%;
+                }  
+        }
+        img{
+            width:40vw;
+            border-radius: 7px;
+            margin-left: 10px;
+        }
+        
     }
+    
+}
+.fun-fact{
+height: 40px;
+background: $theme-color2;
+@include flex-center;
+margin-bottom: 20px;
+margin-top:20px;
+a{
+    text-decoration: none;
+    color: $theme-color1;
+    margin-right: 20px;
+}
 }
 
 footer{
+    font-family: "roboto";
     position: fixed;
     @include flex-center;
     bottom:0px;

@@ -17,48 +17,121 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 header .fa-utensils {
   height: 20px;
+  color: #ce8839;
 }
 
 header img {
   height: 110px;
-  margin-top: 0px;
+  width: 300px;
+  margin-top: -20px;
 }
 
 .spacer {
-  height: 20px;
+  height: 10px;
   width: 100%;
 }
 
-.recipe1 {
+.recipe {
+  padding: 20px;
+}
+
+.recipe .title {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe .title p {
+  margin-top: 5px;
+}
+
+.recipe .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.recipe .flex .text-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recipe .flex .text-flex ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.recipe .flex .text-flex ol li {
+  margin-top: 10px;
+}
+
+.recipe .flex .text-flex article {
+  padding: 0 10px 10px 10px;
+  width: 60%;
+}
+
+.recipe .flex .text-flex article.ingredients {
+  width: 50%;
+  height: 100%;
+}
+
+.recipe .flex img {
+  width: 40vw;
+  border-radius: 7px;
+  margin-left: 10px;
+}
+
+.fun-fact {
+  height: 40px;
+  background: #8cbbae;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.recipe1 img {
-  width: 600px;
-  border-radius: 7px;
-}
-
-.recipe1 li {
-  list-style: none;
+.fun-fact a {
+  text-decoration: none;
+  color: #024130;
+  margin-right: 20px;
 }
 
 footer {
+  font-family: "roboto";
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -17,4 +17,4 @@ HTML-filen ska valideras utan fel på https://validator.w3.org/ .
 CSS
 Använd minst två olika typsnitt på sidan.
 Använd minst två bakgrundsfärger/bakgrundsbilder.
-
+--------------------------------------------------------------
