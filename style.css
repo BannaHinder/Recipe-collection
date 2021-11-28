@@ -29,13 +29,18 @@ header {
 
 header .fa-utensils {
   height: 20px;
-  color: #ce8839;
+  color: #fff4ce;
 }
 
 header img {
   height: 110px;
   width: 300px;
   margin-top: -20px;
+  margin-right: -20px;
+}
+
+hr {
+  border: 1px solid #8cbbae;
 }
 
 .spacer {
@@ -49,9 +54,70 @@ header img {
   padding: 20px;
 }
 
+.recipe .checkbox {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: none;
+}
+
+.recipe input[type="checkbox"]:checked + div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.recipe .inforuta {
+  margin-top: 10px;
+  margin-left: 50px;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  padding: 20px;
+  z-index: 2;
+  overflow: auto;
+  border-radius: 12px;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  background: #8cbbae;
+  color: white;
+  border: 1px solid #024130;
+}
+
+.recipe .inforuta ul {
+  list-style: none;
+}
+
+.recipe .inforuta ul li {
+  margin-bottom: 15px;
+}
+
+.recipe label {
+  position: relative;
+  top: 17px;
+  right: -40px;
+}
+
+.recipe label:hover {
+  cursor: pointer;
+}
+
+.recipe label .fa-utensils:before {
+  color: #8cbbae;
+  background: #fff4ce;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 2px 12px #fff4ce;
+  box-shadow: 0 0 2px 12px #fff4ce;
+}
+
 .recipe .title {
   padding: 10px;
   margin-bottom: 10px;
+  background: #fff4ce;
+  border-radius: 5px;
 }
 
 .recipe .title p {
@@ -93,6 +159,27 @@ header img {
 
 .recipe .flex .text-flex ol li {
   margin-top: 10px;
+  counter-increment: item;
+  margin-bottom: 5px;
+  padding: 0 0 10px 15px;
+}
+
+.recipe .flex .text-flex ol li:before {
+  margin-right: -20px;
+  content: counter(item);
+  background: #fff4ce;
+  border-radius: 100%;
+  color: #024130;
+  width: 1.3em;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  left: -30px;
+}
+
+.recipe .flex .text-flex ol {
+  list-style: none;
+  counter-reset: item;
 }
 
 .recipe .flex .text-flex article {
@@ -112,7 +199,7 @@ header img {
 }
 
 .fun-fact {
-  height: 40px;
+  height: 80px;
   margin-bottom: 40px;
   margin-top: 30px;
   background: #8cbbae;
@@ -128,7 +215,7 @@ header img {
 }
 
 .fun-fact:last-child {
-  height: 60px;
+  height: 80px;
   padding-top: 20px;
   margin-bottom: 50px;
   -webkit-box-align: start;
@@ -143,7 +230,7 @@ header img {
 }
 
 .fun-fact a:hover {
-  color: #ce8839;
+  color: #fff4ce;
 }
 
 footer {
@@ -171,6 +258,6 @@ footer a {
 }
 
 footer a:hover {
-  color: #ce8839;
+  color: #fff4ce;
 }
 /*# sourceMappingURL=style.css.map */

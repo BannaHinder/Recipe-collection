@@ -17,13 +17,16 @@
 
 $theme-color1: #024130;
 $theme-color2: #8cbbae;
-$theme-color3: #ce8839;
+$theme-color3: #fff4ce;
 
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0px;
   margin: 0px;
 }
+// body{
+//   background: $theme-color3;
+// }
 header {
   height: 70px;
   color: $theme-color2;
@@ -39,7 +42,11 @@ header {
     height: 110px;
     width: 300px;
     margin-top: -20px;
+    margin-right: -20px;
   }
+}
+hr{
+  border: 1px solid $theme-color2;
 }
 .spacer {
   height: 1px;
@@ -49,9 +56,58 @@ header {
 }
 .recipe {
   padding: 20px;
+  .checkbox{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+  }
+   input[type="checkbox"]:checked + div{
+    transform: scale(1);
+  }
+  .inforuta{
+    margin-top: 10px;
+    margin-left: 50px;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    z-index: 2;
+    overflow: auto;
+    border-radius: 12px;
+    transform: scale(0,0);
+    transition: 1s ease-in;
+    transform-origin: top left;
+    background: $theme-color2;
+    color: white;
+    border: 1px solid $theme-color1;
+    ul{
+      list-style: none;
+      li{
+        margin-bottom: 15px;
+      }
+    }
+  }
+  label{
+    position: relative;
+    top: 17px;
+    right: -40px;
+    &:hover{
+      cursor: pointer;
+    }
+    .fa-utensils:before{
+      color: $theme-color2;
+      background: $theme-color3;
+      border-radius: 100%;
+    -webkit-box-shadow: 0 0 2px 12px #fff4ce;
+    -moz-box-shadow: 0 0 2px 12px #fff4ce;
+    box-shadow: 0 0 2px 12px #fff4ce;}
+  }
   .title {
     padding: 10px;
     margin-bottom: 10px;
+    background: $theme-color3;
+    border-radius: 5px;
     p {
       margin-top: 5px;
     }
@@ -63,12 +119,36 @@ header {
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      ul li {
+
+      ul {
+    //     background: $theme-color3;
+    // border-radius: 5px;
+        li {
         list-style: none;
         margin-top: 10px;
       }
+    }
       ol li {
         margin-top: 10px;
+        counter-increment: item;
+        margin-bottom: 5px;
+        padding:0 0 10px 15px;
+        &:before {
+          margin-right: -20px;
+          content: counter(item);
+          background: $theme-color3;
+          border-radius: 100%;
+          color: $theme-color1;
+          width: 1.3em;
+          text-align: center;
+          display: inline-block;
+          position: relative;
+          left: -30px;
+        }
+      }
+      ol {
+        list-style: none;
+        counter-reset: item;
       }
       article {
         padding: 0 10px 10px 10px;
@@ -87,13 +167,13 @@ header {
   }
 }
 .fun-fact {
-  height: 40px;
+  height: 80px;
   margin-bottom: 40px;
   margin-top: 30px;
   background: $theme-color2;
   @include flex-center;
   &:last-child{
-    height: 60px;
+    height: 80px;
     padding-top: 20px;
     margin-bottom: 50px;
     align-items: flex-start;
