@@ -1,118 +1,133 @@
-@mixin flex-space-between{
-    display:flex;
-    justify-content:space-between;
-    align-items: flex-start;
-    flex-direction: row;
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
 }
-@mixin flex-center{
-    display:flex;
-    justify-content:center;
-    align-items: center;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@mixin shadow{
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-    -moz-box-shadow: 0 10px 6px -6px #777;
-    box-shadow:0 3px 10px -4px #777;
+@mixin shadow {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 3px 10px -4px #777;
 }
 
-$theme-color1:#024130;
-$theme-color2:#8cbbae;
-$theme-color3:#ce8839;
+$theme-color1: #024130;
+$theme-color2: #8cbbae;
+$theme-color3: #ce8839;
 
-*{
-    font-family: 'Montserrat', sans-serif;
-    padding:0px;
-    margin:0px;
+@font-face {
+  font-family: "Red Hat Display", sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap);
 }
-header{
-    height:70px;
-    color:$theme-color2;
-   
-    @include shadow;
-    padding:20px;
-    margin-left: -10px;
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+header {
+  height: 70px;
+  color: $theme-color2;
+
+  @include shadow;
+  padding: 20px;
+  margin-left: -5px;
+  @include flex-space-between;
+  .fa-utensils {
+    height: 20px;
+    color: $theme-color3;
+  }
+  img {
+    height: 110px;
+    width: 300px;
+    margin-top: -20px;
+  }
+}
+.spacer {
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.recipe {
+  padding: 20px;
+  .title {
+    padding: 10px;
+    margin-bottom: 10px;
+    p {
+      margin-top: 5px;
+    }
+  }
+  .flex {
     @include flex-space-between;
-    .fa-utensils{
-        height: 20px;
-        color: $theme-color3;
-       }
-    img{
-        height:110px;
-        width:300px;
-        margin-top: -20px;
-    }   
-}
-.spacer{
-    height: 10px;
-    width:100%;
-}
-.recipe{
-    padding:20px;
-    .title{
-        padding: 10px;
-        margin-bottom: 10px;
-        p{
-            margin-top: 5px;
-        }
+
+    .text-flex {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      ul li {
+        list-style: none;
+        margin-top: 10px;
+      }
+      ol li {
+        margin-top: 10px;
+      }
+      article {
+        padding: 0 10px 10px 10px;
+        width: 60%;
+      }
+      article.ingredients {
+        width: 50%;
+        height: 100%;
+      }
     }
-    .flex{
-        @include flex-space-between;
-        
-        .text-flex{
-            display:flex;
-            align-items: flex-start;
-            justify-content: center;
-            ul li{
-                list-style: none;
-                margin-top: 10px;
-            }
-            ol li{
-                margin-top:10px;
-            }
-            article{
-                padding:0 10px 10px 10px ;
-                width:60%;
-            }
-            article.ingredients{    
-                width:50%;
-                height:100%;
-                }  
-        }
-        img{
-            width:40vw;
-            border-radius: 7px;
-            margin-left: 10px;
-        }
-        
+    img {
+      width: 40vw;
+      border-radius: 7px;
+      margin-left: 10px;
     }
-    
+  }
 }
-.fun-fact{
-height: 40px;
-background: $theme-color2;
-@include flex-center;
-margin-bottom: 20px;
-margin-top:20px;
-a{
+.fun-fact {
+  height: 40px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  background: $theme-color2;
+  @include flex-center;
+  &:last-child{
+    height: 60px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+  }
+  a {
     text-decoration: none;
     color: $theme-color1;
     margin-right: 20px;
-}
-}
-
-footer{
-    font-family: "roboto";
-    position: fixed;
-    @include flex-center;
-    bottom:0px;
-    width:100%;
-    height:7vh;
-    background: $theme-color1;
-    a{
-        color:white;
-text-decoration: none;
-margin-right: 20px;
+    &:hover {
+      color: $theme-color3;
     }
+  }
 }
-
-
+@import url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap);
+footer {
+  font-family: "Red Hat Display", sans-serif;
+  position: fixed;
+  @include flex-center;
+  bottom: 0px;
+  width: 100%;
+  height: 7vh;
+  background: $theme-color1;
+  a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    &:hover {
+      color: $theme-color3;
+    }
+  }
+}

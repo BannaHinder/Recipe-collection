@@ -1,5 +1,11 @@
+@import url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap);
+@font-face {
+  font-family: "Red Hat Display", sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap);
+}
+
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 0px;
   margin: 0px;
 }
@@ -10,7 +16,7 @@ header {
   -webkit-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 3px 10px -4px #777;
   padding: 20px;
-  margin-left: -10px;
+  margin-left: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +44,9 @@ header img {
 }
 
 .spacer {
-  height: 10px;
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -110,6 +118,8 @@ header img {
 
 .fun-fact {
   height: 40px;
+  margin-bottom: 40px;
+  margin-top: 30px;
   background: #8cbbae;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,8 +130,15 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
+}
+
+.fun-fact:last-child {
+  height: 60px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .fun-fact a {
@@ -130,8 +147,12 @@ header img {
   margin-right: 20px;
 }
 
+.fun-fact a:hover {
+  color: #ce8839;
+}
+
 footer {
-  font-family: "roboto";
+  font-family: "Red Hat Display", sans-serif;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,5 +173,9 @@ footer a {
   color: white;
   text-decoration: none;
   margin-right: 20px;
+}
+
+footer a:hover {
+  color: #ce8839;
 }
 /*# sourceMappingURL=style.css.map */
