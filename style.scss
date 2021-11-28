@@ -19,11 +19,6 @@ $theme-color1: #024130;
 $theme-color2: #8cbbae;
 $theme-color3: #ce8839;
 
-@font-face {
-  font-family: "Red Hat Display", sans-serif;
-  src: url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap);
-}
-
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0px;
@@ -32,7 +27,6 @@ $theme-color3: #ce8839;
 header {
   height: 70px;
   color: $theme-color2;
-
   @include shadow;
   padding: 20px;
   margin-left: -5px;
@@ -113,9 +107,7 @@ header {
     }
   }
 }
-@import url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap);
 footer {
-  font-family: "Red Hat Display", sans-serif;
   position: fixed;
   @include flex-center;
   bottom: 0px;
@@ -123,6 +115,8 @@ footer {
   height: 7vh;
   background: $theme-color1;
   a {
+    @import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+    font-family: 'Shippori Antique B1', sans-serif;
     color: white;
     text-decoration: none;
     margin-right: 20px;
